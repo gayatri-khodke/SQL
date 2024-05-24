@@ -1,0 +1,53 @@
+*****UPDATE QUERY*****
+update to existiong rows
+
+create database:--
+CREATE DATABASE collage1;
+
+use database:--
+USE collage1;
+
+create table and define column, data type constraints:--
+CREATE TABLE bcom(
+    rollno INT, PRIMARY KEY,
+    name VARCHAR(50),
+    mark INT
+);
+
+insert data into table:--
+INSERT INTO bcom
+(rollno, name, mark)
+VALUES
+(1,'gaurav',89),
+(2,'gayatri',75),
+(1,'pooja',58);
+
+in our workbench there is default safe update mede is on.
+it prevent to changes in our database.
+if we want to do changes in our database so we need to of safe mode.
+command :--- SET SQL_UPDATES=0;
+
+update replace mark which is 75 into 90:-
+UPDATE bcom
+SET mark=90;
+WHERE mark=75;
+
+update (add one mark to marks):-
+UPDATE bcom
+SET mark=mark+1;
+
+display table data:-
+SELECT * FROM bcom;
+
+
+
+
+
+
+
+
+
+
+
+
+

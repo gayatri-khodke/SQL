@@ -1,0 +1,30 @@
+********ADD Column********
+ALTER TABLE <table name>
+ADD COLUMN age INT NOT NULL DEFAULT 19;
+
+
+*******MODIFY COLUMN*******
+ALTER TABLE <table name>
+MODIFY COLUMN age VARCHAR(2);
+
+********DROP COLUMN********
+ALTER TABLE <table name>
+DROP COLUMN <column name>
+
+*******change column name*******
+ALTER TABLE <table name>
+CHANGE <existing column name> <new name for column> datatype;
+
+
+*******RENAME TABLE*******
+ALTER TABLE <table name>
+RENAME TO <new name for our table>
+
+******truncate table********
+truncate delete data from table but leave table as it is
+DROP delete whole table
+TRUNCATE TABLE <table name>
+
+******delete table data on the basees of condition*******
+DELETE FROM <table name>
+WHERE mark <80;

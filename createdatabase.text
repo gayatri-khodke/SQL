@@ -1,0 +1,28 @@
+*how to create database :--
+CREATE DATABASE <our dababase name>
+ 
+* after creating database we need to use use query:--
+ USE <our database name>
+
+ *now create table in our database:--
+ CREATE TABLE table1(
+    column1 INT PRIMARY KEY,
+    column2 VARCHAR(50)
+ );
+--  here column1 and column2 is heading of our collumn
+-- we need to define datatype of our column INT OR VARCHAR() OR CHAR() so ON
+
+ *insert data into table :--
+ INSERT INTO <our table name>
+ (column1,column2,column3)
+ VALUES
+ (value goes here acording to column),
+(value goes here acording to column);
+--  while inserging value into table we no need to write column heading again by default it take column in sequence as we write while creating table 
+
+
+*how to show our table information :--
+SELECT * FROM <our table name>
+here * means all row columns all data
+
+*

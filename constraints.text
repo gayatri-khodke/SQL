@@ -1,0 +1,75 @@
+*******constraints ******
+1) Constraints in SQL are rules that limit the type of data that can be 
+stored in a database to ensure the data is accurate and reliable.
+2) In SQL, constraints are rules that you set on a table's columns to 
+ensure the accuracy and reliability of the data in the database.
+
+* when we can use constraints :--
+Constraints are used when defining or modifying the structure of a table to ensure data integrity.
+constraints can be specified when the table is created with the create table statement or 
+after the table is created with the alter taable statement
+if we used constraints then acording to the constraints we can add data to table.
+if we used UNIQUE constrints and we try to add same repeated data to the table . it will throw error. data will not added.
+
+syntax:----
+CREATE TABLE tabe_name(
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+);
+
+Here are the main types of constraints:
+6) NOT NULL: This means a column must always have a value. It cannot be empty.
+1) UNIQUE: This ensures that all values in a column are different from each other. No duplicates are allowed.
+2) PRIMARY KEY: This is a unique identifier for each row in a table. It means the column's values must be unique and cannot be empty.
+3) FOREIGN KEY: This links a column in one table to a column in another table. It ensures the value in this column matches a value in the linked table.
+4) CHECK: This makes sure that all values in a column meet a specific condition. For example, a column might only accept numbers greater than 0.
+5) DEFAULT: This sets a default value for a column if no value is given when a new row is added.
+7) CREATE INDEX :- used to create and retrieve data from the database very quickly
+
+* Not Null:--
+CREATE TABLE Employees (
+    ID INT NOT NULL,
+    Name VARCHAR(100) NOT NULL
+);
+
+* UNIQUE:--
+CREATE TABLE Employees (
+    ID INT UNIQUE,
+    Email VARCHAR(100) UNIQUE
+);
+
+* PRIMARY KEY:--
+CREATE TABLE Employees (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100)
+);
+
+* FOREIGN KEY:--
+CREATE TABLE Departments (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(100)
+);
+
+CREATE TABLE Employees (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    DeptID INT,
+    FOREIGN KEY (DeptID) REFERENCES Departments(DeptID)
+);
+
+
+* CHECK :--
+CREATE TABLE Employees (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT,
+    CHECK (Age >= 18)
+);
+
+* DEFAULT:--
+CREATE TABLE Employees (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Country VARCHAR(100) DEFAULT 'USA'
+);

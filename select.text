@@ -1,0 +1,129 @@
+
+SELECT query helps you fetch and display specific data from a database based on what you need.
+SELECT query in SQL is used to get data from a database. It retrieves and shows data from one or more tables
+SELECT queries to retrieve and filter data from a table based on your needs.
+
+* select all columns:--
+SELECT * FROM Employees;
+
+ID	Name	Age	Department
+1	Alice	30	HR
+2	Bob	45	IT
+3	Charlie	28	Marketing
+4	Diana	35	IT
+5	Eve	40	HR
+
+----------
+
+* select specific columns:--
+SELECT Name, Age FROM Employees;
+Name	Age
+Alice	30
+Bob	45
+Charlie	28
+Diana	35
+Eve	40
+This query retrieves only the Name and Age columns for all rows:
+
+----------
+
+* select with a condition:--
+SELECT Name, Age FROM Employees WHERE Age > 30;
+Name	Age
+Bob	45
+Diana	35
+Eve	40
+This query retrieves the Name and Age columns for rows where the Age is greater than 30:
+
+--------------
+
+select with multiple conditions:--
+SELECT Name, Department FROM Employees WHERE Age > 30 AND Department = 'HR';
+Name	Department
+Eve	HR
+This query retrieves the Name and Department columns for rows where the Age is greater than 30 and the Department is 'HR':
+
+-------------
+
+* select with sorting:--
+SELECT Name, Age FROM Employees ORDER BY Age DESC;
+Name	Age
+Bob	45
+Eve	40
+Diana	35
+Alice	30
+Charlie	28
+
+--------------
+
+SELECT Name, Age FROM Employees ORDER BY Age ASC;
+Name	Age
+Charlie	28
+Alice	30
+Diana	35
+Eve	40
+Bob	45
+
+default is assending order (ASC)
+
+
+
+**********clauses**********
+* LIMIT :--
+SELECT Name, Age FROM Employees ORDER BY Age DESC LIMIT 3;
+ame	Age
+Bob	45
+Eve	40
+Diana	35
+This query selects the Name and Age columns, sorts by Age in descending order, 
+and limits the results to the first 3 rows.
+
+
+******************clauses on select query:**************
+1) WHERE 
+2) FROM
+3) ORDER BY
+4) HAVING
+5) GROUP BY
+6) JOIN
+7) LIMIT
+8) OFFSET
+
+*************operator in select query with where clause*********
+Arithmetic operator: (+) (-) (*) (/) (%) 
+Comparison operators: (=) (!=) (>) (<) (>=) (<=)
+Logical operators:  AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY.
+Bitwise operators:  & bitwise AND, | bitwise OR.
+
+bitwise is not used usuealy
+
+order to write clause:--
+SELECT 
+from
+WHERE
+GROUP BY 
+HAVING 
+ORDER BY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
