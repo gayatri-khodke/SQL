@@ -1,0 +1,11 @@
+Aggregate functions in SQL perform a calculation on a set of values and return a single value. Here's a short explanation of some common aggregate functions:
+
+COUNT(): Counts the number of rows.
+SUM(): Adds up the values in a numeric column.
+AVG(): Calculates the average of the values in a numeric column.
+MIN(): Returns the smallest value in a column.
+MAX(): Returns the largest value in a column.
+
+ex:--
+SELECT COUNT(*), SUM(salary), AVG(salary), MIN(salary), MAX(salary)
+FROM employees;
